@@ -4,17 +4,18 @@ fun main() {
 }
 
 fun encode(num: Int): String {
+    // Here are the variables with the Roman numerals
     val strNum: String = num.toString()
     var str = ""
-    val symbolRoman1 = listOf<String>("I", "X", "C", "M")
-    val symbolRoman2 = listOf<String>("II", "XX", "CC", "MM")
-    val symbolRoman3 = listOf<String>("III", "XXX", "CCC", "MMM")
-    val symbolRoman4 = listOf<String>("IV", "XL", "CD")
-    val symbolRoman5 = listOf<String>("V", "L", "D")
-    val symbolRoman6 = listOf<String>("VI", "LX", "DC")
-    val symbolRoman7 = listOf<String>("VII", "LXX", "DCC")
-    val symbolRoman8 = listOf<String>("VIII", "LXXX", "DCCC")
-    val symbolRoman9 = listOf<String>("IX", "XC", "CM")
+    val symbolRoman1 = listOf("I", "X", "C", "M")
+    val symbolRoman2 = listOf("II", "XX", "CC", "MM")
+    val symbolRoman3 = listOf("III", "XXX", "CCC", "MMM")
+    val symbolRoman4 = listOf("IV", "XL", "CD")
+    val symbolRoman5 = listOf("V", "L", "D")
+    val symbolRoman6 = listOf("VI", "LX", "DC")
+    val symbolRoman7 = listOf("VII", "LXX", "DCC")
+    val symbolRoman8 = listOf("VIII", "LXXX", "DCCC")
+    val symbolRoman9 = listOf("IX", "XC", "CM")
     for (ind in strNum.indices){
         when (strNum[ind]) {
             '1' -> str = str.plus(symbolRoman1[strNum.length - ind - 1])
